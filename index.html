@@ -1,17 +1,197 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>My Site</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
 
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dewas FC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Dewas FC home">
+        <img src="dewas-fc-logo-transparent.png" alt="" class="brand-mark">
+        <span>Dewas FC</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#roster">Roster</a>
+        <a href="#stats">Statistics</a>
+      </nav>
+    </header>
 
-  <h1>Welcome</h1>
+    <main id="home">
+      <section class="hero">
+        <canvas id="pitch-canvas" aria-hidden="true"></canvas>
+        <div class="hero-copy">
+          <h1>Dewas FC</h1>
+          <p class="lede">
+            Never felt this free beefore, I'm high and I'm getting higher,
+            Chains don't rattle no more, Good Lord I'm feeling lighter &#128520;
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#roster">Meet The Squad</a>
+          </div>
+        </div>
+        <aside class="score-card" aria-label="Dewas FC quick stats">
+          <img src="dewas-fc-logo-transparent.png" alt="Dewas FC crest" class="score-crest">
+          <dl>
+            <div>
+              <dt>Club</dt>
+              <dd>Dewas FC</dd>
+            </div>
+            <div>
+              <dt>Vibe</dt>
+              <dd>For Fun</dd>
+            </div>
+            <div>
+              <dt>Squad</dt>
+              <dd>13 Players</dd>
+            </div>
+            <div>
+              <dt>Captain</dt>
+              <dd>Dewas</dd>
+            </div>
+            <div>
+              <dt>Co Captains</dt>
+              <dd>Crishal & Rhythm</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+      <section class="section roster-section" id="roster">
+        <div class="section-heading">
+          <p class="eyebrow">Official Roster</p>
+          <h2>Dewas FC Squad</h2>
+        </div>
+        <div class="roster-grid">
+          <article class="player-card captain">
+            <span class="role">Defender &#169;&#65039;</span>
+            <h3>Dewas Poudyel</h3>
+            <p>Mr. Lockdown, Dewas FC Owner & Captain.</p>
+          </article>
+          <article class="player-card">
+            <span class="role">Defender</span>
+            <h3>Pravin Sapkota</h3>
+            <p>On debt, can't leave untill then.</p>
+          </article>
+          <article class="player-card">
+            <span class="role">Defender</span>
+            <h3>Rehash Gurung</h3>
+            <p>Ultimate Puppy Guard.</p>
+          </article>
+          <article class="player-card">
+            <span class="role">Defender</span>
+            <h3>Ujwal Chamlagai</h3>
+            <p>Comes out of nowhere and kicks it.</p>
+          </article>
+          <article class="player-card">
+            <span class="role">Defender</span>
+            <h3>Ashwin Neopany</h3>
+            <p>cute</p>
+          </article>
+          <article class="player-card">
+            <span class="role">Defender</span>
+            <h3>Divyesh Timsina</h3>
+            <p>barely comes</p>
+          </article>
+          <article class="player-card midfield">
+            <span class="role">Midfielder / Main Attacker</span>
+            <h3>Rajit Giri</h3>
+            <p>wanna be gk, Mr. ICAMPTHENET, The teams main score option.</p>
+          </article>
+          <article class="player-card midfield">
+            <span class="role">Midfielder</span>
+            <h3>Safal</h3>
+            <p>ALSO barely comes.</p>
+          </article>
+          <article class="player-card midfield">
+            <span class="role">Midfielder</span>
+            <h3>Bishal Regmi</h3>
+            <p>frick you.</p>
+          </article>
+          <article class="player-card midfield">
+            <span class="role">Midfielder</span>
+            <h3>Alan</h3>
+            <p>Tempo controller.</p>
+          </article>
+          <article class="player-card attacker">
+            <span class="role">Main Attacker &#169;&#65039;</span>
+            <h3>Crishal Tamang</h3>
+            <p>Press leader.</p>
+          </article>
+          <article class="player-card attacker">
+            <span class="role">Main Attacker &#169;&#65039;</span>
+            <h3>Rhythm Paudel</h3>
+            <p>top scorer and finisher.</p>
+          </article>
+          <article class="player-card attacker">
+            <span class="role">Midfielder / Main Attacker</span>
+            <h3>Karan Bhujel</h3>
+            <p>set piece controller</p>
+          </article>
+        </div>
+      </section>
+      <section class="section stats-section" id="stats">
+        <div class="section-heading">
+          <p class="eyebrow">Statistics</p>
+          <h2>Team Leaderboards</h2>
+        </div>
 
-  <img src="dewas-fc-logo-transparent.png" width="200">
-  <img src="dewas-field.png" width="400">
+        <div class="stats-board">
+          <article class="stat-row">
+            <div class="stat-row-heading">
+              <span>Goals</span>
+              <small>Scroll sideways</small>
+            </div>
+            <div class="stat-scroller" tabindex="0" aria-label="Goals leaderboard">
+              <div class="stat-card leader"><span class="place">1</span><h3>Rhythm Paudel</h3><strong>21</strong><p>Goals</p></div>
+              <div class="stat-card"><span class="place">2</span><h3>Rajit Giri</h3><strong>7</strong><p>Goals</p></div>
+              <div class="stat-card"><span class="place">3</span><h3>Dewas Poudyel</h3><strong>6</strong><p>Goals</p></div>
+              <div class="stat-card"><span class="place">3</span><h3>Crishal Tamang</h3><strong>6</strong><p>Goals</p></div>
+              <div class="stat-card"><span class="place">3</span><h3>Karan Bhujel</h3><strong>6</strong><p>Goals</p></div>
+              <div class="stat-card"><span class="place">4</span><h3>Rehash Gurung</h3><strong>2</strong><p>Goals</p></div>
+              <div class="stat-card"><span class="place">5</span><h3>Pravin Sapkota</h3><strong>0</strong><p>Goals</p></div>
+              <div class="stat-card"><span class="place">5</span><h3>Ujwal Chamlagai</h3><strong>0</strong><p>Goals</p></div>
+              <div class="stat-card"><span class="place">5</span><h3>Ashwin Neopany</h3><strong>0</strong><p>Goals</p></div>
+              <div class="stat-card"><span class="place">5</span><h3>Divyesh Timsina</h3><strong>0</strong><p>Goals</p></div>
+              <div class="stat-card"><span class="place">5</span><h3>Safal</h3><strong>0</strong><p>Goals</p></div>
+              <div class="stat-card"><span class="place">5</span><h3>Bishal Regmi</h3><strong>0</strong><p>Goals</p></div>
+              <div class="stat-card"><span class="place">5</span><h3>Alan</h3><strong>0</strong><p>Goals</p></div>
+            </div>
+          </article>
 
-  <script src="script.js"></script>
-</body>
+          <article class="stat-row">
+            <div class="stat-row-heading">
+              <span>Points</span>
+              <small>Scroll sideways</small>
+            </div>
+            <div class="stat-scroller" tabindex="0" aria-label="Points leaderboard">
+              <div class="stat-card leader"><span class="place">1</span><h3>Rhythm Paudel</h3><strong>54.5</strong><p>Points</p></div>
+              <div class="stat-card"><span class="place">2</span><h3>Rajit Giri</h3><strong>33</strong><p>Points</p></div>
+              <div class="stat-card"><span class="place">3</span><h3>Karan Bhujel</h3><strong>15</strong><p>Points</p></div>
+              <div class="stat-card"><span class="place">4</span><h3>Crishal Tamang</h3><strong>9</strong><p>Points</p></div>
+              <div class="stat-card no-rank"><span class="place">N/A</span><h3>Dewas Poudyel</h3><strong>N/A</strong><p>Doesn't count</p></div>
+              <div class="stat-card"><span class="place">5</span><h3>Rehash Gurung</h3><strong>0</strong><p>Points</p></div>
+              <div class="stat-card"><span class="place">5</span><h3>Ujwal Chamlagai</h3><strong>0</strong><p>Points</p></div>
+              <div class="stat-card"><span class="place">5</span><h3>Ashwin Neopany</h3><strong>0</strong><p>Points</p></div>
+              <div class="stat-card"><span class="place">5</span><h3>Divyesh Timsina</h3><strong>0</strong><p>Points</p></div>
+              <div class="stat-card"><span class="place">5</span><h3>Safal</h3><strong>0</strong><p>Points</p></div>
+              <div class="stat-card"><span class="place">5</span><h3>Alan</h3><strong>0</strong><p>Points</p></div>
+              <div class="stat-card negative"><span class="place">6</span><h3>Bishal Regmi</h3><strong>-5</strong><p>Points</p></div>
+              <div class="stat-card debt"><span class="place">7</span><h3>Pravin Sapkota</h3><strong>-955</strong><p>Points in debt</p></div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Dewas FC</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

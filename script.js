@@ -1,10 +1,42 @@
 const canvas = document.querySelector("#pitch-canvas");
 const ctx = canvas.getContext("2d");
+const siteSong = document.querySelector("#site-song");
+const songVolume = document.querySelector("#song-volume");
+const songVolumeValue = document.querySelector("#song-volume-value");
+const minimumSongVolume = 0.1;
 
 let width = 0;
 let height = 0;
 let pointer = { x: 0.62, y: 0.42 };
 
+function setSongVolume(value) {
+  const volume = Math.max(minimumSongVolume, Math.min(1, Number(value) / 100));
+  siteSong.volume = volume;
+  siteSong.muted = false;
+  songVolume.value = Math.round(volume * 100);
+  songVolumeValue.value = songVolume.value;
+}
+
+function playSiteSong() {
+  siteSong.muted = false;
+  siteSong.play().catch(() => {
+    document.addEventListener("pointerdown", playSiteSong, { once: true });
+    document.addEventListener("keydown", playSiteSong, { once: true });
+  });
+}
+
+siteSong.addEventListener("volumechange", () => {
+  if (siteSong.muted || siteSong.volume < minimumSongVolume) {
+    setSongVolume(Math.max(minimumSongVolume, siteSong.volume) * 100);
+  }
+});
+
+songVolume.addEventListener("input", (event) => {
+  setSongVolume(event.target.value);
+});
+
+setSongVolume(songVolume.value);
+playSiteSong();
 
 const balls = Array.from({ length: 16 }, (_, index) => ({
   x: Math.random(),
